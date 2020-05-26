@@ -1,0 +1,336 @@
+body{ 
+    background: #fff;
+    margin:0; padding:0;
+    color:#111;
+    font-family: Roboto, serif;
+    font-size: 20px;
+}
+
+h1 { font-size: 40px; text-align: center; }
+h2 { font-size: 24px; text-align: center; }
+
+.center, .center-align {
+    text-align: center;
+}
+
+a { text-decoration: none; }
+
+.imgsmall img {max-height:220px;}
+
+.alert {
+  position: relative;
+  padding: .5rem 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+/******************************/
+/* menu */
+nav {
+    background-color: #009688 !important;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+}
+
+nav .brand-logo {
+    color: #fff;
+    font-size: 2.1rem;
+}
+
+
+/******************************/
+/* liste de pokemons */
+.listpokemons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+ }
+
+@media (max-width: 1200px) {
+  .listpokemons { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+    .listpokemons { grid-template-columns: 1fr; }
+  }
+
+/*******************************************************
+* card */
+.card-grid, .card-panel {
+    position: relative;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+ }
+
+ .card-grid img{
+    max-height: 180px;
+    max-width: 90%;
+    margin: 8px 20px 0 20px; 
+}
+
+.card-panel {
+  padding:20px;
+}
+
+
+.card-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-detail .form-group {
+  margin: 20px;
+}
+
+.card-detail .card-image {
+  text-align: center;
+}
+
+.card-detail .card-image img {
+  height: 300px;
+  margin: 20px auto; 
+}
+
+.card-infos {
+  margin-top:40px;
+}
+
+.card-stacked {
+  text-align: center;
+}
+
+/*******************************************************
+* badge */
+
+.chip {
+  display: inline-block;
+  height: 32px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(0,0,0,0.6);
+  line-height: 32px;
+  padding: 0 12px;
+  border-radius: 16px;
+  background-color: #e0e0e0 ;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.typeAcier { background-color: #bdbdbd; }
+.typeCombat { background-color: #ff5722; }
+.typeDragon { background-color: #7e57c2; }
+.typeEau { background-color: #42a5f5; }
+.typeElectrik { background-color: #eeff41; }
+.typeFée { background-color: #f48fb1; }
+.typeFeu { background-color: #ef5350; }
+.typeGlace { background-color: #f9fbe7 ; }
+.typeInsecte { background-color: #8d6e63; }
+.typeNormal { background-color: #e0e0e0; }
+.typeObscur { background-color: #424242 ; }
+.typePlante { background-color: #66bb6a; }
+.typePoison { background-color: #ff7043; }
+.typePsy { background-color: #9575cd ; }
+.typeRoche { background-color: #757575; }
+.typeSol { background-color: #a1887f; }
+.typeSpectre { background-color: #303f9f ; }
+.typeTénèbres { background-color: #1a237e; }
+.typeVol { background-color: #42a5f5; }
+
+/*******************************************************
+* container bootstrap : 1200px - 992px - 768px - 576px */
+
+.container {
+    width: 100%;
+    padding: 0;    
+    margin: 0;
+    margin: 0 auto 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 980px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.container-small {
+  width: 500px;
+}
+
+@media (max-width: 768px) {
+  .container-small {
+    width: 100%; 
+    max-width: 768px;
+  }
+}
+
+/*******************************************************
+* Bouton bootstrap */
+
+button {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 4px 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  margin-bottom: 4px;
+  margin-right: 10px;
+}
+
+button {
+  color: #083863;
+  background-color: #ECF2FB;
+  border-color: #ECF2FB;
+}
+button:hover {
+  color: #083863;
+  background-color: rgb(147, 224, 214);
+  border-color: #ECF2FB;
+}
+button:focus, button.focus {
+  color: #083863;
+  background-color: #CEDDF2;
+  border-color: #ECF2FB;
+  box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+}
+
+/*******************************************************
+* champs de formulaire */
+
+input {
+border-style: solid;
+border-width: 1px;
+border-color: #ddd;
+border-radius: 0.25rem;
+margin: 10px 0 10px 0;
+padding: 5px 10px;
+margin:0;
+font-size: 16px;
+color: #111;
+width:auto;
+}
+textarea {
+width: 98%; 
+height: 300px;
+border-style: solid;
+border-width: 1px;
+border-color: #ddd;
+border-radius: 0.25rem;
+padding: 5px 10px;
+margin: 10px 0 10px 0;
+font-size: 16px;
+color: #111;
+}
+
+input:focus, textarea:focus {
+box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.1);
+border-color: #0062cc;
+}
+
+select {
+  display: inline-block;
+  position: relative;
+  margin: 0em;
+  padding: .375rem 1.75rem .375rem .75rem;       
+  /* height: calc(1.5em + .75rem + 2px); */
+  min-width: 0;
+  font-size: 16px; 
+  border-radius: 0.25rem;
+  border-image: initial;
+  border: 1px solid #ddd;
+  border-radius: .25rem;
+  text-rendering: auto;    
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: start;
+  -webkit-appearance: menulist;
+  box-sizing: border-box;
+  align-items: center;
+  white-space: pre;
+  -webkit-rtl-ordering: logical;
+  word-wrap: normal;
+  text-transform: none;    
+  background:  #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/8px 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  min-width:150px;
+}
+
+input[type=checkbox] {
+-webkit-appearance: none;
+-moz-appearance: none;
+-ms-appearance: none;
+-border-radius: .25rem;
+height: 15px;
+width: 15px;
+background: #fff;
+border: 1px solid #ddd;
+}
+
+input[type="checkbox"]:checked {
+background: #00CEB4;
+margin:0px;
+position: relative;
+}
+
+input[type="date"] {
+width:160px;
+}
+
+/*******************************************************
+* Formulaire */
+.form-group {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="date"] {
+  width:200px;
+}
+
+.form-actions {
+  margin-top: 10px;   
+  padding-left: 160px;
+}
+.form-hidden {
+display:none;
+}

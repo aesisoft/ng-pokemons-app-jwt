@@ -1,0 +1,37 @@
+<div class="container">
+    <div *ngIf="pokemon">
+      <h2>{{ pokemon.nom }}</h2>
+      <div class="card-panel card-detail">
+        <div class="card-image">
+          <img [src]="pokemon.image">
+        </div>
+        <div class="card-infos">
+          <div class="form-group">
+            <label>Nom</label>
+            <strong>{{ pokemon.nom }}</strong>
+          </div>
+          <div class="form-group">
+            <label>Points de vie</label>
+            <strong>{{ pokemon.ptvie }}</strong>
+          </div>
+          <div class="form-group">
+            <label>Points de dégâts</label>
+            <strong>{{ pokemon.ptdegat }}</strong>
+          </div>
+          <div class="form-group">
+            <label>Types</label>
+            <strong><span *ngFor="let type of pokemon.types" class="{{ type | pokemonTypeColor }}">{{ type }}&nbsp;</span></strong>
+          </div>
+          <div class="form-group">
+            <label>Date de création</label>
+            <strong>{{ pokemon.created | date:"dd/MM/yyyy" }}</strong>
+          </div>
+          <div class="form-actions">
+             <button (click)="goBack()">Retour</button>
+             <button (click)="goEdit()">Editer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p *ngIf='!pokemon' class="center">Aucun pokémon à afficher !</p>
+  </div>

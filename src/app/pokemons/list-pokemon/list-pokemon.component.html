@@ -1,0 +1,16 @@
+<h1 class='center'>{{title}}</h1>
+<div class='container listpokemons'>
+  <div *ngFor='let pokemon of pokemons' class="card-grid" (click)="selectPokemon(pokemon)" pkmnBorderCard>
+    <div class="card-image">
+      <img [src]="pokemon.image">
+    </div>
+    <div class="card-stacked">
+      <h2>{{ pokemon.nom }}</h2>
+      <p><small>{{ pokemon.created | date:"dd MMM yyyy":'':'fr-FR' | uppercase }}</small></p>
+      <span *ngFor='let type of pokemon.types' class="{{ type | pokemonTypeColor }}">{{ type }}</span>
+    </div>
+  </div>
+</div>
+<p class='center'>
+  <a href="./pokemon/create">Nouveau Pokémon</a>
+</p>

@@ -1,0 +1,47 @@
+<div class="container">
+    <!-- Le formulaire -->
+    <form *ngIf="pokemon" [formGroup]="pokemonForm" (ngSubmit)="onSubmit()" novalidate>
+
+        <div class="card-panel">
+
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" formControlName="nom" />
+            </div>
+
+            <div class="form-group">
+                <label for="ptvie">Points de vie</label>
+                <input type="number" formControlName="ptvie" />
+            </div>
+
+            <div class="form-group">
+                <label for="ptdegat">Points de dégât</label>
+                <input type="number" formControlName="ptdegat" />
+            </div>
+
+            <div class="form-group">
+                <label for="ptdegat">Image</label>
+                <input type="text" formControlName="image" />
+            </div>
+
+            <div class="form-group">
+                <label for="ptdegat">Types</label>
+                <div>
+                    <div *ngFor="let t of pokeTypes; let i=index">
+                        <label>
+                            <input type="checkbox" [value]="t.value" [checked]="hasType(t.value)"
+                                (change)="onCheckboxChange($event)" />
+                            {{ t.value }}
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" [disabled]="pokemonForm.pristine">Enregistrer</button>
+                <button (click)="goBack()">Retour</button>
+            </div>
+        </div>
+
+    </form>
+</div>
