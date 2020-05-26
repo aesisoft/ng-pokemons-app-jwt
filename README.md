@@ -3,6 +3,8 @@
 Ce projet est l'application Angular finale développée pas-à-pas dans le cours situé ici : https://cours.aesisoft.fr/Angular/ <br/>
 Etapes 1 à 6, avec l'authentification JWT à l'API backend.
 
+L'application avant authentification se trouve ici : https://github.com/aesisoft/ng-poemons-app
+
 Cette application Angular fonctionne avec l'API Web Symfony5 qui se trouve ici : https://github.com/aesisoft/pokemonsJwt 
 
 ___
