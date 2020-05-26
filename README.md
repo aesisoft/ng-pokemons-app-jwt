@@ -1,4 +1,4 @@
-# Application ***ng-pokemons-app-jwt*** pour le cours Angular 9
+# Application finale sécurisée pour le cours Angular 9
 
 Ce projet est l'application Angular finale développée pas-à-pas dans le cours situé ici : https://cours.aesisoft.fr/Angular/ <br/>
 Etapes 1 à 6, avec l'authentification JWT à l'API backend.
